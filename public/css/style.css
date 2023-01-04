@@ -69,6 +69,11 @@ a:hover {
 
 .page-header {
     background: url(../image/bg.png) no-repeat;
+    background-position: 0px -180px;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 300px;
+    overflow: hidden;
     position: relative;
     background-size: cover;
 }
@@ -78,10 +83,16 @@ a:hover {
 }
 .page-title {
     font-size: 46px;
-    line-height: 1;
+    /* line-height: 0.1; */
     color: #fff;
     font-weight: 600;
+    margin-top: -90px;
     text-align: center;
+}
+
+.page-subtitle {
+    color: #acacac;
+    padding-top: 15px;
 }
 
 .card-section {
@@ -127,7 +138,7 @@ input[type="checkbox"] + label:before {
     display: block;
     width: 20px;
     height: 20px;
-    border: 1px solid #221122;
+    border: 1px solid green;
     position: absolute;
     left: 0;
     top: 0;
@@ -146,4 +157,21 @@ input[type="checkbox"]:checked + label:before {
     border-left-color: transparent;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+.animate {
+    transform: translate(0, 40px);
+    opacity: 0;
+    transition: 1.5s;
+}
+
+.animate.from-top {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+.kartu {
+    transition: all 0.5s;
+}
+.kartu:hover {
+    box-shadow: 0 10px 10px rgb(0 0 0 / 0.1);
 }
